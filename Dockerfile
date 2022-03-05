@@ -21,7 +21,7 @@ RUN node --version
 RUN npm --version
 
 RUN npm install -g @vue/cli && vue --version
-
+RUN npm install --global yarn
 
 WORKDIR /usr/apps
 
