@@ -2,7 +2,7 @@
   <div  class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3 py-5">
-        <h1>Generate ehhhh</h1>
+        <h1>Generate change</h1>
 
         <form v-on:submit.prevent="makeWebsiteThumbnail">
           <div class="form-group">
@@ -29,7 +29,8 @@ export default {
 
   methods: {
     makeWebsiteThumbnail() {
-      axios.post("http://localhost:3000/api/thumbnail", {
+      let hostName = location.hostname
+      axios.post("http://"+hostName+":9090/api/thumbnail", {
         url: this.websiteUrl,
       }).then((response) => {
         this.thumbnailUrl = response.data.screenshot;

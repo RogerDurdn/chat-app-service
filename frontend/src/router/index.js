@@ -1,10 +1,14 @@
-import { createWebHistory, createRouter } from "vue-router";
+import {
+  createRouter, createWebHistory,
+} from "vue-router";
 import Home from "@/pages/HomeVue.vue";
 import Tumb from "@/pages/Tumb.vue";
+import WebSock from "@/pages/WebSock.vue";
+import ViewError from "@/pages/404View.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/some",
     name: "Home",
     component: Home,
   },
@@ -12,6 +16,16 @@ const routes = [
     path: "/tumb",
     name: "Tumb",
     component: Tumb,
+  },
+  {
+    path: "/",
+    name: "WebSock",
+    component: WebSock,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "ViewError",
+    component: ViewError,
   },
 ];
 
