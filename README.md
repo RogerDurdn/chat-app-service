@@ -1,1 +1,1 @@
-# ConfigView
+# Chat App
