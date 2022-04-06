@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #chat{
+            white-space: pre-line;
+            background-color: slategrey;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-6 offset-md-3 py-5">
+        <h1>Chat</h1>
+
+        <br>
+        <div>
+            <h3>Connected like: <span class="clientIdC"/></h3>
+        </div>
+
+        <form onsubmit="return false;" method="post" name="connectionForm" >
+            <input id="clientId" type="text" style="width: 88px;">
+            <input type="submit" value="Connect" onclick="connect()">
+        </form>
+
+        <br>
+        <div style="">
+            <h3>Messages</h3>
+            <button id="clear">Clear</button>
+
+            <textarea  id="chat" rows="4" cols="50"></textarea>
+            > <span class="clientIdC"/> -
+        </div>
+        <form action="sendMessage" onsubmit="return false;" method="post" name="message" >
+            <input id="message" type="textarea" name="">
+            <input type="submit" value="Send" onclick="sendMessage()">
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+<script src="assets/chat.js"></script>
+<script></script>
+
+</body>
+</html>
